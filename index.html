@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="WhatsApp Image 2023-12-16 at 16.42.08_5c329a64.png" class="photo_change">
+    <title>My_website</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">Logo.</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="home.html" target="_blank" class="active" style="--navAni:1">Home</a></li>
+                <li><a href="about.html" target="_blank" style="--navAni:2">About</a></li>
+                <li><a href="skills.html" target="_blank" style="--navAni:3">Skills</a></li>
+                <li><a href="resume.html" target="_blank" style="--navAni:4">Resume</a></li>
+                <li><a href="contact.html" target="_blank " style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="images">
+                <img src="WhatsApp Image 2023-12-16 at 16.42.08_5c329a64.png" alt="" class="img-w" width="300" height="300">
+                <span class="bg-effect-1">
+                <span class="bg-effect-1"></span>
+
+                </span>
+            </div>
+            <div class="detail">
+                <h3>Hi, I'm</h3>
+                <h1><span style="color:#f9532d;">Vutukuri</span> PranaiDivakar</h1> 
+                <p>
+                    Undergraduate in Computer Science and Engineering
+Extremely motivated to constantly develop my skills and grow professionally. I am confident in my ability to come up with interesting ideas
+for Team cooperation. Always want to learn more and do more.
+
+                </p>  
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/pranai-vutukuri-932292235/" style="--socialAni:1" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/pranai_vutukuri/?next=%2F" style="--socialAni:2" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/VutukuriPranaiDivakar" target="_blank" style="--socialAni:3"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.youtube.com/channel/UCoD1cVk-6P2wp44Mj0mj67A" target="_blank" style="--socialAni:4"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>
